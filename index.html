@@ -27,10 +27,10 @@
 </script>
 
 <body>
-    <a-scene>
-        <!-- vr-mode-ui="enabled: false;"
-        renderer='antialias: true; alpha: true; precision: mediump;'
-        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' -->
+    <a-scene vr-mode-ui="enabled: false;"
+    renderer='antialias: true; alpha: true; precision: mediump;'
+    embedded arjs='trackingMethod: best; debugUIEnabled: false;'>
+        
         <a-assets>
             <video src="mov_bbb.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
