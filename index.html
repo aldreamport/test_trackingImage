@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-</head>
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
-<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+</head>
 <script>
     window.onload = function() {
         AFRAME.registerComponent('videohandler', {
@@ -30,12 +26,11 @@
     };
 </script>
 
-<body style='margin : 0px;'>
-    <a-scene
-        vr-mode-ui="enabled: false;"
+<body>
+    <a-scene>
+        <!-- vr-mode-ui="enabled: false;"
         renderer='antialias: true; alpha: true; precision: mediump;'
-        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
-
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' -->
         <a-assets>
             <video src="mov_bbb.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
@@ -45,7 +40,7 @@
 
         <a-nft
             videohandler
-            type='nft' url='./dataNft/pinball'
+            type='nft' url='dataNft/pinball'
             smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
         >
             <a-video
